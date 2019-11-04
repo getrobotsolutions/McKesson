@@ -1,0 +1,11 @@
+.main-content {
+    padding: 30px 0;
+    height: 1085px;
+    }
+
+footer{
+  height: 450px;
+}
+footer img{
+  max-height: 450px;
+}

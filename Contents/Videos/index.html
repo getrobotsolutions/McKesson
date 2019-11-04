@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+    <script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../Scripts/LogConsole.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../Scripts/Language.js"></script>
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../maincontents.js"></script>
+    <script src="../../boots/js/bootstrap.min.js"></script>
+    <script src="js/Videos.js"></script>
+    
+
+    <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+    <link href="css/Videos.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body onload="" onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;"  oncontextmenu="return false;" style="-ms-user-select:none;padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; " class="noselect unselectable">
+<header>
+  <div class="logo" src onclick="FC_ContentsCall('Home')">
+    <img src="../../assets/logo.png">
+  </div>
+</header>
+<nav>
+  <img src="../../assets/icons/home.png" class="img-home" onclick="FC_ContentsCall('Home')">
+</nav>
+<section class="main-content">
+   <h1 class="title">Videos</h1>
+   <div class="bmg">
+      <div class="wrap tradeslider">
+               
+               <div class="slider-nav" class="">
+                <a class="prev-img" onclick="change(-1)" ><img src="images/previous.png"></a>
+                <a class="next-img" onclick="change(1)" class="next-img"><img src="images/next.png"></a>    
+              </div>
+             <!-- <img src="images/slide1.gif" name="pic1" width="870"> -->
+             <video id="myVideo" width="800" height="540" nocontrols>
+              <source src="videos/1.mp4" type="video/mp4" id="vid1">Your browser does not support the video tag.
+              </video>
+              <img src="images/play.png" id="playPause" onclick="vidplay()">
+      </div>
+    </div>
+</section>
+  <footer>
+    <img src="../../assets/footer.png">
+  </footer>
+
+<div id="dialog-overlay"></div>
+      <div id="dialog-box">
+        
+      </div>
+
+
+</body>
+
+<script type="application/javascript">
+
+  function JSUnload(){
+    window.external.RobotDanceStart(false);
+  }
+   
+</script>
+
+
+<script language="JavaScript" type="text/javascript" src="../Common/Scripts/common-inner.js"></script>
+
+<script language="javascript" type="text/javascript">
+    window.history.forward();
+</script>
+<script language="javascript" type="text/javascript">
+    //window.history.forward();
+    var i=1,j=0;
+    function change(j){
+        i+=j;
+        if(i>3){
+          i=1;
+        }
+
+        if(i<=0){
+          i=3;
+        }
+        var vid1 = document.getElementById('vid1');
+
+        vid1.src="videos/" + i + ".mp4"; 
+        document.getElementById('myVideo').load();
+        var button = document.getElementById("playPause");
+        button.src="images/play.png";
+        //vid1=
+        console.log(vid1);
+    }
+</script>
+<style type="text/css">
+  
+</style>
+
+
+</html>
