@@ -156,3 +156,28 @@ $(document).ready(function(){
 
 });
 
+function OnJoystickControlled(strPara){
+    var btn_info = strPara.split(',')[4];
+
+
+    if(btn_info[0] == '1'){
+        PlaySpeech("Welcome to McKesson Booth");
+
+    }
+
+    if(btn_info[1] == '1'){
+        PlaySpeech("Unset");
+
+    }
+    if(btn_info[2] == '1'){
+        PlaySpeech("Unset");
+    }
+    if(btn_info[3] == '1'){
+        PlaySpeech("Unset");
+
+    }
+    if(btn_info[4] == '1'){
+        PlaySpeech("Unset");
+    }
+}
+
