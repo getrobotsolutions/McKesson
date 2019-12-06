@@ -15,7 +15,7 @@
         speak[1] = "Take a picture with me.";
         speak[2] = "Pick a song and let's boogie.";
         speak[3] = "Become a robot.";
-        speak[4] = "see our pictures from today on our slack channel";
+        speak[4] = "Check out some of our products";
         speak[5] = "";
 
 //window.external.ChangeLanguage("en-us");
@@ -34,8 +34,8 @@ function FC_ContentsCall(strContentsName, strLanguage)
            break;
 
         case "Services":
-            //writeCookie("NavigationState", true, 30);
            location.href = "Contents/Services/index.html";
+            PlaySpeech(speak[4]);
            break;
 
         case "Selfie":
