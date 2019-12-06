@@ -161,7 +161,7 @@ function OnJoystickControlled(strPara){
 
 
     if(btn_info[0] == '1'){
-        PlaySpeech("Welcome to McKesson Booth");
+        PlaySpeech("Welcome to the McKesson Booth");
 
     }
 
